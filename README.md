@@ -1,6 +1,6 @@
 
   <p align="center">
-  <img alt="BPM to ms logo" height="80" src="https://github.com/nguilherme010/BPMtoms/blob/main/Artwork/BPM%20to%20ms%20NO%20BG%20LOGO.png">
+  <img alt="BPM to ms logo" height="80" src="https://github.com/nguilherme010/BPM-to-ms/blob/master/BPM%20to%20ms%20NO%20BG%20LOGO.png">
   </p>
   
 
@@ -16,7 +16,7 @@
   
 #
    <p align="center">
-     <img alt="BPM to ms app preview" src="https://github.com/nguilherme010/BPMtoms/blob/main/Artwork/BPMtoms%20print.jpg">
+     <img alt="BPM to ms app preview" src="https://github.com/nguilherme010/BPM-to-ms/blob/master/bpm%20to%20ms%20print.png">
    </p>
    
    
