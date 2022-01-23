@@ -1,0 +1,101 @@
+﻿<Window x:Class="BPMtoms.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BPMtoms"
+        mc:Ignorable="d"
+        Title="BPM to ms" Height="540" Width="904"
+        WindowStyle="ThreeDBorderWindow"
+        Name="Janela"
+        ResizeMode="NoResize">
+    <Window.Resources>
+        <Style x:Key="txtDesign" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="fonts/ds-digi.ttf #DS-Digital"/>
+        </Style>
+    </Window.Resources>
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="BackgroundCARALHO.png" Stretch="Uniform"/>
+        </Grid.Background>
+        <Image Name="Botão1OFF"  Source="Botao1Off.png"/>
+        <Image Name="Botão1ON" Source="Botao1ON.png" Visibility="Hidden"/>
+
+        <Image Name="Botão2OFF"  Source="Botao2OFF.png" Margin="-1,0,1,0"/>
+        <Image Name="Botão2ON" Source="Botao2ON.png" Margin="3,-15,29,-8" Visibility="Hidden"/>
+
+        <Image Name="Botão3OFF"  Source="Botao3OFF.png" Margin="-1,0,1,0"/>
+        <Image Name="Botão3ON" Source="Botao3ON.png" Margin="32,0,0,47" Visibility="Hidden"/>
+
+        <Image Name="Botão4OFF"  Source="Botao4OFF.png" Margin="-1,0,1,0"/>
+        <Image Name="Botão4ON" Source="Botao4ON.png" Margin="6,1,30,8" Visibility="Hidden"/>
+
+        <Image Name="Botão5OFF"  Source="Botao5OFF.png" Margin="-1,0,1,0"/>
+        <Image Name="Botão5ON" Source="Botao5ON.png" Margin="0,6,1,0" Visibility="Hidden"/>
+
+        <Image Name="Botão6OFF"  Source="Botao6OFF.png" Margin="-1,0,1,0"/>
+        <Image Name="Botão6ON" Source="Botao6ON.png" Margin="42,6,-45,28" Visibility="Hidden"/>
+
+        <Image Name="DottedOFF"  Source="DottedOFF.png" Margin="-1,-3,1,3"/>
+        <Image Name="DottedON" Source="DottedON.png" Margin="21,5,30,21" Visibility="Hidden"/>
+
+        <Image Name="TripletOFF"  Source="TripletOFF.png" Margin="-1,6,1,-6"/>
+        <Image Name="TripletON" Source="TripletON.png" Margin="-1,34,5,-6" Visibility="Hidden"/>
+
+        <Image Name="CopyOFF" Source="TESTEcopy6.png"/>
+        <Image Name="CopyON" Source="TESTEcopy6PRESSED.png" Visibility="Hidden"/>
+        
+        <Button Opacity="0" Name="Copy" PreviewMouseLeftButtonDown="Copy_PreviewMouseLeftButtonDown" 
+                PreviewMouseLeftButtonUp="Copy_PreviewMouseLeftButtonUp"  Margin="788,409,56,77"/>
+        <Button Opacity="0" Name="Botão1"  PreviewMouseLeftButtonDown="Botão1_PreviewMouseLeftButtonDown" 
+                Margin="479,53,315,345" Foreground="#01000000" BorderBrush="#01000000" BorderThickness="0"/>
+        <Button Opacity="0" Name="Botão2"  PreviewMouseLeftButtonDown="Botão2_PreviewMouseLeftButtonDown" 
+                Margin="620,53,174,345" Foreground="#01000000" BorderBrush="#01000000" BorderThickness="0"/>
+        <Button Opacity="0" Name="Botão3"  PreviewMouseLeftButtonDown="Botão3_PreviewMouseLeftButtonDown" 
+                Margin="756,53,30,345" Foreground="#01000000" BorderBrush="#01000000" BorderThickness="0"/>
+        <Button Opacity="0" Name="Botão4"  PreviewMouseLeftButtonDown="Botão4_PreviewMouseLeftButtonDown" 
+                Margin="479,197,315,207" Foreground="#01000000" BorderBrush="#01000000" BorderThickness="0"/>
+        <Button Opacity="0" Name="Botão5"  PreviewMouseLeftButtonDown="Botão5_PreviewMouseLeftButtonDown" 
+                Margin="620,197,174,207" Foreground="#01000000" BorderBrush="#01000000" BorderThickness="0"/>
+        <Button Opacity="0" Name="Botão6"  PreviewMouseLeftButtonDown="Botão6_PreviewMouseLeftButtonDown" 
+                Margin="756,197,30,207" Foreground="#01000000" BorderBrush="#01000000" BorderThickness="0"/>
+        <Button Opacity="0" Name="Dotted"  PreviewMouseLeftButtonDown="Dotted_PreviewMouseLeftButtonDown" 
+                Margin="544,333,251,134" Foreground="#01000000" BorderBrush="#01000000" BorderThickness="0"/>
+        <Button Opacity="0" Name="Triplet"  PreviewMouseLeftButtonDown="Triplet_PreviewMouseLeftButtonDown" 
+                Margin="692,333,103,134" Foreground="#01000000" BorderBrush="#01000000" BorderThickness="0"/>
+
+        <Button Name="Credit"  PreviewMouseLeftButtonDown="Credit_PreviewMouseLeftButtonDown" Margin="70,47,524,392" Opacity="0" BorderThickness="0" Cursor="Hand"/>
+
+        <Label Visibility="Hidden" Name="BPM" Content="{Binding ElementName=Knobera, Path=Angle}" Margin="0,0,860,462"/>
+        <TextBlock Style="{StaticResource txtDesign}" x:Name="TextoResult" FontSize="72"
+                   Foreground="#FFE21414" 
+                   RenderTransformOrigin="0.5,0.5" 
+                   Margin="0,0,113.5,26.162" 
+                   TextAlignment="Right" 
+                   Padding="0,0,10,0" 
+                   UseLayoutRounding="False" 
+                   TextOptions.TextFormattingMode="Display" 
+                   HorizontalAlignment="Right" 
+                   Width="240.5" 
+                   LineStackingStrategy="BlockLineHeight" 
+                   VerticalAlignment="Bottom" 
+                   Height="78.338" 
+                   LineHeight="72">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="Display BPM.png" Stretch="Uniform"/>
+            </TextBlock.Background>
+        </TextBlock>
+        <TextBlock x:Name="BPMTexto"
+                   Foreground="#FFCF1D1D" FontSize="80"
+                   Text="{Binding ElementName=Knobera, Path=Angle, NotifyOnTargetUpdated=True}"
+                   TargetUpdated="BPMTexto_TargetUpdated"
+                   Style="{StaticResource txtDesign}"
+                   Margin="80,135,590,282" TextAlignment="Right">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="Display BPM.png" Stretch="Uniform"/>
+            </TextBlock.Background>
+        </TextBlock>
+        <local:VolumeControl x:Name="Knobera" Margin="104,225,620,111"/>
+        
+    </Grid>
+</Window>
